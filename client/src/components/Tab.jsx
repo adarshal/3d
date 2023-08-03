@@ -9,12 +9,14 @@ const Tab = ({key,tab,isFilterTab,isActiveTab,handleClick}) => {
   { backgroundColor: snap.color, opacity: 0.5 } :
   { backgroundColor: "transparent", opacity: 1 };
 
+  const tooltip = tab.name === 'logoShirt' ? 'Add it as Logo' : tab.name === 'stylishShirt' ? 'Add img as style' : tab.name;
+
   return (
     <div key={tab.name}
     className={`tab-btn ${isFilterTab}? 'rounded-full glassmorhism':'rounded-4'`}
       onClick={handleClick}
       style={activeStyles}
-      title={tab.name}
+      title={tooltip}
       >
         <img 
         src={tab.icon}

@@ -27,7 +27,7 @@ const Home = () => {
           </motion.header>
           <motion.div className="home-content" {...headContainerAnimation}>
             <motion.div {...headTextAnimation}>
-              <h1 className='"head-teaxt'>
+            <h1 className="head-text text-white">
                 Lest's <br className="xl-block hidden" /> Do it
               </h1>
             </motion.div>
@@ -35,7 +35,7 @@ const Home = () => {
               {...headContentAnimation}
               className="flex flex-col gap-5"
             >
-              <p className="max-w-md font-normal text-gray-600">
+              <p className="max-w-md font-normal text-azure-600 text-base">
                 Welcome to our cutting-edge t-shirt customization experience,
                 where you can turn your ideas into 3D reality
               </p>
@@ -46,9 +46,9 @@ const Home = () => {
             </motion.div>
             <CustomButton 
                 type="filled"
-                title="Customize It"
+                title="Customize It =>"
                 handleClick={() => state.intro = false}
-                customStyles="w-fit px-4 py-2.5 font-bold text-sm"
+                customStyle="w-fit px-4 py-2.5 font-bold text-sm"
               />
           </motion.div>
         </motion.section>

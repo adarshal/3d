@@ -111,6 +111,15 @@ const Customizer = () => {
       setActiveEditorTab("");
     });
   };
+  const downloadCanvasToImage = () => {
+    const canvas = document.querySelector('canvas'); // Replace with the correct canvas selector
+    const image = canvas.toDataURL('image/png');
+
+    const link = document.createElement('a');
+    link.href = image;
+    link.download = 'created_tshirt.png'; // Specify the desired file name
+    link.click();
+  };
 
   return (
     <AnimatePresence>
@@ -163,6 +172,13 @@ const Customizer = () => {
                 }}
               />
             ))}
+             <button className='download-btn' onClick={downloadCanvasToImage}>
+              <img
+                src={download}
+                alt='download_image'
+                className='w-3/5 h-3/5 object-contain'
+              />
+            </button>
           </motion.div>
         </>
       )}
